@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  root "projects#index"
+
+  # enables the following routes; index, show, new, create, edit, update, destroy
+  # these match to /_ | /_/new | /_/:id | /_/:id/edit
+  resources :projects
 end
