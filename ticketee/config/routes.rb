@@ -57,5 +57,7 @@ Rails.application.routes.draw do
 
   # enables the following routes; index, show, new, create, edit, update, destroy
   # these match to /_ | /_/new | /_/:id | /_/:id/edit
-  resources :projects
+  resources :projects do
+    resources :tickets
+  end
 end
