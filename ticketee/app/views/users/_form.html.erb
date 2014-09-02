@@ -27,5 +27,9 @@
     <%= f.text_field :password_confirmation %>
   </p>
 
-  <%= f.submit "Sign up" %>
+  <% if @user.new_record? %>
+    <%= f.submit "Sign Up" %>
+  <% else %>
+    <%= f.submit "Update Profile" %>
+  <% end %>
 <% end %>
